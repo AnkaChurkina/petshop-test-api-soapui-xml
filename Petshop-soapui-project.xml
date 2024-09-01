@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="51b085cc-500c-4e62-b891-e949b07a19a7" activeEnvironment="Default" name="Petshop" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="88d43ebe-6fb8-4acd-a932-325eefd411b6" name="Simplest case"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="bb4ba905-ed72-406a-b3c8-deef2318cbed" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="pet group" searchProperties="true"><con:settings/><con:testStep type="httprequest" name="create" id="41a00463-835d-44ca-aea1-3c9d86fc7ba3"><con:settings/><con:config method="POST" xsi:type="con:HttpRequest" id="34729faf-2b7d-452e-8e75-289a717258db" name="create" postQueryString="false" mediaType="application/json" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://petstore.swagger.io/v2/pet</con:endpoint><con:request>{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="httprequest" name="update" id="35ed04b2-0a80-4545-a7d5-a9bd81171e0a"><con:settings/><con:config method="PUT" xsi:type="con:HttpRequest" id="2c7607ca-0579-4155-95d4-5d6962b95e99" name="update" postQueryString="false" mediaType="application/json" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://petstore.swagger.io/v2/pet</con:endpoint><con:request>{
+  "id": 9223372036854029473,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "something"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="httprequest" name="get" id="77a76587-45fd-4e09-938a-52c8a51f449a"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="4a492080-2222-41c2-9447-490650596df6" name="get" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://petstore.swagger.io/v2/pet/9223372036854029473</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="httprequest" name="getByStatus" id="f1e22fed-7e1c-42f7-ac5c-874fd98a9904"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="b103441e-6cad-429c-a15a-264e82b34be9" name="getByStatus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://petstore.swagger.io/v2/pet/findByStatus</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><con:parameter><con:name>status</con:name><con:value>available</con:value><con:style>QUERY</con:style></con:parameter></con:parameters></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
